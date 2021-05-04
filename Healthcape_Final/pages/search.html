@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Search</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/dashboard/">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        /* Note: overrides added by ROB */
+        
+        .card1,
+        .card2,
+        .card3 {
+            margin-left: 1rem !important;
+            margin-top: 12px !important;
+            display: inline-block;
+            width: 20% !important;
+            padding-left: 0 !important;
+        }
+        
+        div.Info {
+            width: 100%
+        }
+        
+        table.table-sm {
+            width: 100%;
+            background: white;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+        /* ADDED BY ROB */
+        
+        nav#sidebarMenu img {
+            width: 50px;
+            height: auto;
+        }
+        
+        ul.nav {
+            padding-left: 10px
+        }
+        
+        nav#sidebarMenu img#logo {
+            width: 50px;
+        }
+        
+        img.mike {
+            width: 100px
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="/css/dashboard.css" rel="stylesheet">
+    </link>
+
+    <body>
+
+        <nav>
+            <!-- <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">Company name</a> -->
+            <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+            <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
+      <a class="nav-link" href="#">Sign out</a>
+    </li>
+  </ul> -->
+        </nav>
+
+        <div class="container-fluid">
+            <div class="row">
+                <nav id="sidebarMenu" class="col-md-3 col-lg-1 d-md-block  navbar-expand-sm sidebar collapse">
+                    <div class="sidebar-sticky pt-3">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/">
+                                    <span data-feather="home"></span>
+                                    <img src="/images/WebLogo.svg" id="logo" class="" alt="Healthscape Logo">
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/">
+                                    <!-- <span data-feather="file"></span> -->
+                                    <img src="/images/HomeIcon.svg" id="home" class="" alt="Home">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link notifications" href="notifications">
+                                    <!-- <span data-feather="shopping-cart"></span> -->
+                                    <img src="/images/NotificationIcon.svg" id="notifications" class="" alt="Notifications">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link profile" href="profile">
+                                    <!-- <span data-feather="users"></span> -->
+                                    <img src="/images/ProfileIcon.svg" id="profile" class="" alt="Profile">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link help" href="help">
+                                    <!-- <span data-feather="bar-chart-2"></span> -->
+                                    <img src="/images/HelpIcon.svg" id="help" class="" alt="Help">
+                                </a>
+                            </li>
+                            <ul class="nav-item">
+                                <a href="/pages/login.html" class="nav-link" href="#">
+                                    <!-- <span data-feather="layers"></span> -->
+                                    <img src="/images/Logout.svg" id="logout" class="" alt="Logout">
+                                </a>
+                                </li>
+                            </ul>
+
+
+                    </div>
+                </nav>
+
+                <main role="main" class="col-md-9 ml-sm-3 col-lg-10 px-md-4">
+                    <section id="page-content">
+
+                        <div class="form-group has-search navbar-dark bg-none flex-md-nowrap ">
+                            <span class="fa fa-search form-control-feedback"></span>
+                            <input type="text" class="form-control border-bottom border-top-0 border-left-0 border-right-0 rounded-0" placeholder="Search">
+                            <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+                        </div>
+
+
+                        <div class="time">
+                            <div>
+                                <img src="/images/TimeIcon.svg" id="time" alt="Mike Smith">
+                            </div>
+                            <div>
+                                <h1 class="TimeText">19:12 AM Today Feb. 21</h1>
+                                <!--   <a href="#" class="notifications">here</a> -->
+                            </div>
+                        </div>
+
+                        <!-- NOTE: added py-2 utility class below this comment here -->
+                        <div class="row banner py-2">
+                            <div class="col-md-1">
+                                <img src="/images/mike.svg" class="mike" alt="Mike Smith">
+                            </div>
+                            <div class="col-md-4">
+                                <h1>Mike Smith #275639</h1>
+                                <p>Main Spring Valley Hospital</p>
+                                <p>June 5, 1971 (49)</p>
+                                <p>Denver, CO</p>
+                            </div>
+
+
+                            <div class="col-md-7">
+                                <div class="card1 col">
+                                    <div>
+                                        <img src="/images/ScaleIcon.svg" id="scale" alt="Mike Smith">
+                                    </div>
+                                    <div>
+                                        <h1 class="ScaleText"><strong>Weight</strong></h1>
+                                        <p class="ScaleP">256 lb</p>
+                                    </div>
+                                </div>
+
+                                <div class="card2">
+                                    <div>
+                                        <img src="/images/HeightIcon.svg" id="height" alt="Mike Smith">
+                                    </div>
+                                    <div>
+                                        <h1 class="HeightText"><strong>Height</strong></h1>
+                                        <p class="HeightP">6' 3"</p>
+                                    </div>
+                                </div>
+
+                                <div class="card3">
+                                    <div>
+                                        <img src="/images/BloodIcon.svg" id="blood" alt="Mike Smith">
+                                    </div>
+                                    <div>
+                                        <h1 class="BloodText"><strong>Blood</strong></h1>
+                                        <p class="BloodP">O-</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h2 class="container">Medical Conditions</h2>
+                                <div class="Info">
+                                    <div>
+                                        <h3>High Blood Pressure</h3>
+                                    </div>
+                                </div>
+
+                                <h2 class="container">Medical Notes</h2>
+                                <div class="Info">
+                                    <div>
+                                        <h3>Faints easily</h3>
+                                    </div>
+                                </div>
+
+                                <h2 class="container">Allergies</h2>
+                                <div class="Info">
+                                    <div>
+                                        <h3>None</h3>
+                                    </div>
+                                </div>
+
+                                <h2 class="container">Medications</h2>
+                                <div class="Info">
+                                    <div>
+                                        <h3 class="col">Betaxolol</h3>
+                                        <hr>
+                                        <h3 class="col">Lisinopril</h3>
+                                        <hr>
+                                        <h3 class="col">Valsartan</h3>
+                                    </div>
+                                </div>
+
+                                <h2 class="container">Primary Language</h2>
+                                <div class="Info">
+                                    <div>
+                                        <h3 class="col">English</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <h2 class="container">Prescriptions</h2>
+                                <table class=" table table-sm">
+                                    <tbody>
+                                        <th>Betaxolol</th>
+                                        <tr>
+                                        <td>10mg • 100 Tablets</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Next Refill</td>
+                                            <td>Refills Left</td>
+                                            <td>Status</td>
+                                        </tr>
+                                        <tr>
+                                            <td>12/20/20</td>
+                                            <td>5</td>
+                                            <td>Ordered</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <table class="table table-sm">
+                                    <tbody>
+                                        <th>Lisinopril</th>
+                                        <tr>
+                                            <td>5mg • 1000 Tablets</td>
+                                        <tr>
+                                            <td>Next Refill</td>
+                                            <td>Refills Left</td>
+                                            <td>Status</td>
+                                        </tr>
+                                        <tr>
+                                            <td>12/20/20</td>
+                                            <td>5</td>
+                                            <td>Standby</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <table class="table table-sm">
+                                    <tbody>
+                                        <th>Valsartan</th>
+                                        <tr>
+                                        <td>12.5mg • 90 Tablets</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Next Refill</td>
+                                            <td>Refills Left</td>
+                                            <td>Status</td>
+                                        </tr>
+                                        <tr>
+                                            <td>12/20/20</td>
+                                            <td>5</td>
+                                            <td>Standby</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- spacer div -->
+                            <div class="col-md-1">
+                                <h3> </h3>
+                              </div>
+
+                            <div class="col-md-3">
+                                <img src="/images/records.svg" id="svg" class="rounded mx-auto d-block" alt="Medical Records">
+                                <h1 class="medical">Medical Records</h1>
+                                
+                                <div class="Info">
+                                    <div>
+                                        <h3 class="col records"><strong>Prescription</strong></h3>
+                                        <h3 class="col records1">MSV Hospital</h3>
+                                        <hr>
+                                        <h3 class="col records"><strong>General Visit</strong></h3>
+                                        <h3 class="col records1">MSV Hospital</h3>
+                                        <hr>
+                                        <h3 class="col records"><strong>Discharge Letter</strong></h3>
+                                        <h3 class="col records1">MSV Hospital</h3>
+                                        <hr>
+                                        <h3 class="col records"><strong>Prescription</strong></h3>
+                                        <h3 class="col records1">MSV Hospital</h3>
+                                        <hr>
+                                        <h3 class="col records"><strong>Surgery Documentation</strong></h3>
+                                        <h3 class="col records1">MSV Hospital</h3>
+                                        <hr>
+                                        <h3 class="col records"><strong>General Visit</strong></h3>
+                                        <h3 class="col records1">MSV Hospital</h3>
+                                        <hr>
+                                        <h3 class="col records"><strong>Prescription</strong></h3>
+                                        <h3 class="col records1">MSV Hospital</h3>
+                                        
+                                    </div>
+                                </div>
+
+                                <h1 class="emergency">Emergency Contacts</h1>
+
+                                <div class="Info">
+                                    <div>
+                                        <h3 class="col records"><strong>Samantha Smith</strong></h3>
+                                        <h3 class="col records1">Home Phone: 640-592-0491</h3>
+                                        <h3 class="col records1">Cell Phone: 640-300-5984</h3>
+                                        
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+
+
+            <!-- Note: You had your jQuery and Boostrap pathed to assets above root -->
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+            
+            <script src="js/bootstrap.bundle.min.js"></script>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+
+            <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+            <!---    <script src="dashboard.js"></script> -->
+
+
+            <script src="js/partial.js"></script>
+    </body>
+
+</html>
